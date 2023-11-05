@@ -3,15 +3,18 @@ import Swal from 'sweetalert2'
 import img from "../../assets/image.jpg"
 
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import { AuthContext } from '../Login/Firebase/AuthProvider';
 
 
 const AddAssignment = () => {
 
     const [startDate, setStartDate] = useState(new Date());
+    const {user} =useContext(AuthContext)
+    const email=(user.email);
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -25,7 +28,7 @@ const AddAssignment = () => {
 
 
         const ImageURL = form.ImageURL.value
-        const products = { Title, AssignmentDifficulty, Marks, Description,Date, ImageURL }
+        const products = { Title, AssignmentDifficulty, Marks, Description,Date,email, ImageURL }
         console.log(products);
 
 

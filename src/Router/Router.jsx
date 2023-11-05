@@ -8,6 +8,8 @@ import Register from "../Components/Login/Register";
 import AllAssignment from "../Components/Assignment/AllAssignment";
 import AddAssignment from "../Components/Add Assignment/AddAssignment";
 import PrivateRoute from "../Components/Login/PrivateRoute";
+import Details from "../Components/Details/Details";
+import Update from "../Components/Update/Update";
 
 
 
@@ -37,12 +39,23 @@ const Router = createBrowserRouter([
         },
         {
             path : "/assinments",
-            element : <AllAssignment></AllAssignment>
+            element : <AllAssignment></AllAssignment>,
+            loader : ()=> fetch("http://localhost:5000/addassignment")
            
         },
         {
             path : "/addassinments",
             element : <PrivateRoute><AddAssignment></AddAssignment></PrivateRoute>
+           
+        },
+        {
+            path : "/details",
+            element :<Details></Details>
+           
+        },
+        {
+            path : "/update",
+            element :<Update></Update>
            
         },
     
