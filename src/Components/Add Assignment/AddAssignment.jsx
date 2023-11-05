@@ -29,27 +29,27 @@ const AddAssignment = () => {
         console.log(products);
 
 
-        // fetch('http://localhost:5000/items', {
-        //     method: 'POST',
-        //     headers: {
-        //         "content-type": 'application/json'
-        //     },
-        //     body: JSON.stringify(products)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Product Added Succesfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //             })
-        //             e.target.reset()
+        fetch('http://localhost:5000/addassignment', {
+            method: 'POST',
+            headers: {
+                "content-type": 'application/json'
+            },
+            body: JSON.stringify(products)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added Succesfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                    e.target.reset()
 
-        //         }
-        //     })
+                }
+            })
 
     }
 
