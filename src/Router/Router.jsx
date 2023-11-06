@@ -10,6 +10,9 @@ import AddAssignment from "../Components/Add Assignment/AddAssignment";
 import PrivateRoute from "../Components/Login/PrivateRoute";
 import Details from "../Components/Details/Details";
 import Update from "../Components/Update/Update";
+import SubmittedAssignment from "../Components/SubmittedAssignment/SubmittedAssignment";
+import GiveMark from "../Components/Give Mark/GiveMark";
+
 
 
 
@@ -17,6 +20,7 @@ import Update from "../Components/Update/Update";
 
 
 const Router = createBrowserRouter([
+    
     {
         path :"/",
        element :<MainLayout></MainLayout> ,
@@ -49,15 +53,30 @@ const Router = createBrowserRouter([
            
         },
         {
-            path : "/details",
-            element :<Details></Details>
+            path : "/givemark",
+            element : <PrivateRoute><GiveMark></GiveMark></PrivateRoute>
            
         },
         {
-            path : "/update",
-            element :<Update></Update>
+            path : "/submittedAssignment",
+            element : <PrivateRoute><SubmittedAssignment></SubmittedAssignment></PrivateRoute>,
+            loader : ()=> fetch("http://localhost:5000/submit")
            
         },
+        {
+            path : "/details/:id",
+            element :<Details></Details>,
+            loader : ({params}) =>fetch(`http://localhost:5000/addassignment/${params.id}`)
+           
+        },
+        {
+            path : "/update/:id",
+            element :<Update></Update>,
+            loader : ({params}) =>fetch(`http://localhost:5000/addassignment/${params.id}`)
+
+           
+        },
+       
     
         
         

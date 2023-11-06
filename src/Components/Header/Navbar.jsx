@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { Link, NavLink } from "react-router-dom";
@@ -12,6 +13,17 @@ import { AuthContext } from "../Login/Firebase/AuthProvider";
 
 
 const Navbar = () => {
+
+
+    // const [loading, setLoading] = useState(false)
+
+    // useEffect(()=>{
+    //     setLoading(true)
+    //     setTimeout(() => {
+    //         setLoading(false)
+            
+    //     },);
+    // },2000)
 
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
@@ -215,7 +227,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
                                     <NavLink
-                                        to=""
+                                        to="/submittedAssignment"
                                         className={({ isActive, isPending }) =>
                                             isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
                                         }

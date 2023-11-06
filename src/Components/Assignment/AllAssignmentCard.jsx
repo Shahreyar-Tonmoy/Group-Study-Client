@@ -1,12 +1,43 @@
 /* eslint-disable react/prop-types */
 
+import { useContext } from 'react';
 import { FiEdit } from 'react-icons/fi';
 import { HiEye } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Login/Firebase/AuthProvider';
+
+import Swal from 'sweetalert2';
 
 
 const AllAssignmentCard = ({ AllCards }) => {
-    const { Title, AssignmentDifficulty, Marks, Description, Date, ImageURL } = AllCards
+    const {_id, Title, AssignmentDifficulty, Marks, Description, Date, ImageURL } = AllCards
+   
+    const Dist = Description.slice("", 90)
+
+    const {user} =useContext(AuthContext)
+    const Navigate =useNavigate()
+
+    const btn=()=>{
+        if(!user){
+            Swal.fire({
+                title: 'You Are Not Sign in!',
+                text: "Signin & continue..",
+                icon: 'warning',
+                
+                confirmButtonColor: '#3085d6',
+                
+                confirmButtonText: 'Sign in'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Navigate("/signin")
+                }
+              })
+        }
+    }
+
+
+
+
     return (
         <div className="w-96 shadow-xl rounded-xl ">
             <div className="mb-10 w-full">
@@ -40,21 +71,36 @@ const AllAssignmentCard = ({ AllCards }) => {
                         </a>
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                        {Description}
+                        {Dist}
                     </p>
 
                     <div className="flex justify-end items-end mt-5">
                     <div className="join join-vertical lg:join-horizontal">
                         
-                        <Link to={"/update"}>
-                        <button className="btn  hover:bg-blue-400 hover:-translate-x-1 bg-blue-400"><FiEdit className='text-2xl text-white '></FiEdit></button>
-                        </Link>
+                        
                         
 
                        
-                        <Link className='' to={"/details"}>
+                        {
+                            user ? <>
+                            <Link to={`/update/${_id}`}>
+                        <button className="btn  hover:bg-blue-400 hover:-translate-x-1 bg-blue-400"><FiEdit className='text-2xl text-white '></FiEdit></button>
+                        </Link>
+                            </> : 
+                        <button onClick={btn} className="btn  hover:bg-blue-400 hover:translate-x-1 bg-blue-400"><FiEdit className='text-2xl text-white '></FiEdit></button>
+                        
+                        }
+
+
+                        {
+                            user ? <>
+                            <Link to={`/details/${_id}`}>
                         <button className="btn  hover:bg-blue-400 hover:translate-x-1 bg-blue-400"><HiEye className='text-2xl text-white '></HiEye></button>
                         </Link>
+                            </> : 
+                        <button onClick={btn} className="btn  hover:bg-blue-400 hover:translate-x-1 bg-blue-400"><HiEye className='text-2xl text-white '></HiEye></button>
+                        
+                        }
                     </div>
                     </div>
 

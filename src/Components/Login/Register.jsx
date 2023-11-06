@@ -85,7 +85,7 @@ const Register = () => {
 
 
     return (
-        <div className="bg-contain bg-no-repeat" style={{ backgroundImage: `url(https://i.ibb.co/BLsB6q0/20944400-removebg-preview.png)` }}>
+        <div className="bg-contain  bg-no-repeat" style={{ backgroundImage: `url(https://i.ibb.co/BLsB6q0/20944400-removebg-preview.png)` }}>
             <div className="max-w-screen-xl mx-auto     flex justify-end ">
                 <div className="card glass flex-shrink-0 w-full max-w-sm mx-auto lg:mx-0  ">
                     {/* <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
