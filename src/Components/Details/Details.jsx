@@ -118,7 +118,7 @@ const Details = () => {
                     <Modal
                         isOpen={modalIsOpen}
                         onAfterOpen={afterOpenModal}
-                        className={" mt-52  bg-base-300 rounded-xl  mx-[450px] right-auto bottom-auto "}
+                        className={" lg:mt-52  bg-base-300 rounded-xl  lg:mx-[450px] lg:right-auto bottom-auto "}
 
 
 

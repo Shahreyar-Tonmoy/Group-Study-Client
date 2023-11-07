@@ -91,8 +91,9 @@ const AllAssignmentCard = ({ AllCards,myCartData,setMyCartData }) => {
 
 
     return (
-        <div className="w-96 shadow-xl rounded-xl ">
-            <div className="mb-10 w-full">
+        <div className='mx-auto'>
+            <div className="md:w-80 lg:w-96 w-96 shadow-xl rounded-xl ">
+            <div className="mb-10 w-full ">
                 <div className="mb-8 overflow-hidden rounded">
                     <img src={ImageURL} alt="" className="w-full h-72" />
                 </div>
@@ -127,7 +128,7 @@ const AllAssignmentCard = ({ AllCards,myCartData,setMyCartData }) => {
                     </p>
 
                     <div className="flex justify-end items-end mt-5">
-                        <div className="join join-vertical lg:join-horizontal">
+                        <div className="join join-horizontal pb-5">
 
 
 
@@ -176,6 +177,7 @@ const AllAssignmentCard = ({ AllCards,myCartData,setMyCartData }) => {
 
                 </div>
             </div>
+        </div>
         </div>
     );
 };

@@ -72,97 +72,121 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
-                                <NavLink
-                                    to="/"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "text-blue-500  underline" : ""
-                                    }
-                                >
-                                    Home
-                                </NavLink>
-                            </li>
+                            
 
-                            <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
-                                <NavLink
-                                    to="/Addproduct"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "text-blue-500  underline" : ""
-                                    }
-                                >
-                                    Add Product
-                                </NavLink>
-                            </li>
-                            <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
-                                <NavLink
-                                    to="/mycart"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "text-blue-500  underline" : ""
-                                    }
-                                >
-                                    My Cart
-                                </NavLink>
-                            </li>
+                        <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                            <NavLink
+                                to="/"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-blue-500  underline" : ""
+                                }
+                            >
+                                Home
+                            </NavLink>
+                        </li>
 
+                        <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                            <NavLink
+                                to="/assinments"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-blue-500  underline" : ""
+                                }
+                            >
+                                Assignments
+                            </NavLink>
+                        </li>
+                        <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                            {/* <NavLink
+                                to="/signin"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-blue-500  underline" : ""
+                                }
+                            >
+                                Login
+                            </NavLink> */}
+                        </li>
 
-
-                            {/* {
+                        {
                             user && (<>
                                 <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
                                     <NavLink
-                                        to="/profile"
+                                        to="/addassinments"
                                         className={({ isActive, isPending }) =>
-                                            isPending ? "pending" : isActive ? "text-[#FFB606] underline" : ""
+                                            isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
                                         }
                                     >
-                                        Profile
+                                        Create Assignments
                                     </NavLink>
                                 </li>
                                 <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
                                     <NavLink
-                                        to="/contactus"
+                                        to="/MyAssignment"
                                         className={({ isActive, isPending }) =>
-                                            isPending ? "pending" : isActive ? "text-[#FFB606] underline" : ""
+                                            isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
                                         }
                                     >
-                                        About Us
+                                        My Assignments
+                                    </NavLink>
+                                </li>
+                                <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                                    <NavLink
+                                        to="/submittedAssignment"
+                                        className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
+                                        }
+                                    >
+                                         Submitted Assignments
                                     </NavLink>
                                 </li>
                             </>)
-                        } */}
+                        }
 
-
-
-                            {/* {
-                                user ? (
-                                    <>
-                                        <li onClick={hendleSignOut} className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
-                                            <NavLink
-                                                to="/SignIn"
-                                                className={({ isActive, isPending }) =>
-                                                    isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
-                                                }
-                                            >
-                                                Sign Out
-                                            </NavLink>
-                                        </li>
-
-                                    </>
-                                ) : (<>
-                                    <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                        {
+                            user ? (
+                                <>
+                                    <li onClick={hendleSignOut} className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
                                         <NavLink
                                             to="/SignIn"
                                             className={({ isActive, isPending }) =>
                                                 isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
                                             }
                                         >
-                                            Sign In
+                                            Sign Out
                                         </NavLink>
                                     </li>
 
-                                </>)
-                            } */}
+                                </>
+                            ) : (<>
 
+                                <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                                    <NavLink
+                                        to="/register"
+                                        className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
+                                        }
+                                    >
+                                        Register
+                                    </NavLink>
+                                </li>
+
+                                <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
+                                    <NavLink
+                                        to="/SignIn"
+                                        className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
+                                        }
+                                    >
+                                        Sign In
+                                    </NavLink>
+                                </li>
+
+
+                            </>)
+                        }
+
+
+
+                           
 
 
                         </ul>
