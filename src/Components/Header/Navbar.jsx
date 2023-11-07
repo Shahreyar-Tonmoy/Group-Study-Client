@@ -217,7 +217,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
                                     <NavLink
-                                        to=""
+                                        to="/MyAssignment"
                                         className={({ isActive, isPending }) =>
                                             isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
                                         }
@@ -316,7 +316,7 @@ const Navbar = () => {
                                     <div className="">
                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                             <div className="w-10 rounded-full">
-                                                <img src={user?.photoURL} />
+                                                <img referrerPolicy="no-referrer" src={user?.photoURL} />
 
                                             </div>
                                         </label>

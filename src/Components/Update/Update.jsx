@@ -8,7 +8,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 
 const Update = () => {
@@ -17,6 +17,8 @@ const Update = () => {
 
 
     const [startDate, setStartDate] = useState(new Date());
+
+    const Navigate = useNavigate()
     
     
 
@@ -53,6 +55,8 @@ const Update = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+
+                    Navigate("/assinments")
                     e.target.reset()
 
                 }

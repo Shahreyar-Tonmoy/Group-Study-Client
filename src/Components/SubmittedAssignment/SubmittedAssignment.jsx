@@ -1,11 +1,30 @@
 import { useLoaderData } from "react-router-dom";
 import SubmittedAssignmentCard from "./SubmittedAssignmentCard";
+import { useEffect, useState } from "react";
+
 
 
 const SubmittedAssignment = () => {
+    // const data = useLoaderData()
 
-    const Submit = useLoaderData()
+    // const filter =data.filter(e => e.Status.includes("pending") )
+    // console.log(filter);
+
+
     // const length = (Submit.length);
+
+    const [submitAssignment,setSubmitAssignment] = useState([])
+
+    const url = `http://localhost:5000/submitstatus?Status=pending` 
+
+    useEffect(()=>{
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setSubmitAssignment(data))
+
+    },[])
+    console.log(submitAssignment);
+
 
 
 
@@ -13,7 +32,13 @@ const SubmittedAssignment = () => {
 
 
         <div>
-            <div className="overflow-x-auto my-10">
+
+            
+
+            {
+                submitAssignment.length > 0 ?  <>
+                
+                <div className="overflow-x-auto my-10">
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -30,8 +55,12 @@ const SubmittedAssignment = () => {
                     </thead>
                     <tbody>
 
+                        {/* {
+                            filter?.map(data => <SubmittedAssignmentCard key={data._id} AllCards={data} ></SubmittedAssignmentCard>)
+                        } */}
+
                         {
-                            Submit?.map(data => <SubmittedAssignmentCard key={data._id} AllCards={data} ></SubmittedAssignmentCard>)
+                            submitAssignment?.map(data => <SubmittedAssignmentCard key={data._id} AllCards={data} ></SubmittedAssignmentCard>)
                         }
 
 
@@ -40,6 +69,10 @@ const SubmittedAssignment = () => {
 
                 </table>
             </div>
+
+                </> :
+                <h1 className="text-center text-3xl font-semibold mt-10">There is no pending assignment here</h1>
+            }
 
         </div>
     );

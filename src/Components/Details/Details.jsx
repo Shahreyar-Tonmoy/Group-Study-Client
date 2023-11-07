@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Login/Firebase/AuthProvider";
 import Swal from "sweetalert2";
 import ReactDOM from 'react-dom';
@@ -36,6 +36,7 @@ const Details = () => {
         setIsOpen(false);
     }
 
+    const Navigate =useNavigate()
 
 
     const handleSubmit = e => {
@@ -45,7 +46,7 @@ const Details = () => {
         const QuickNote = form.QuickNote.value
         const pdfLink = form.pdfLink.value
 
-        const products = { Title, AssignmentDifficulty, Marks, Status, Description, Date, email, pdfLink, ImageURL, QuickNote }
+        const products = {Title, AssignmentDifficulty, Marks, Status, Description, Date, email, pdfLink, ImageURL, QuickNote }
         console.log(products);
 
 
@@ -69,6 +70,7 @@ const Details = () => {
 
                     })
                     setIsOpen(false);
+                    Navigate('/submittedAssignment')
 
                     e.target.reset()
 
