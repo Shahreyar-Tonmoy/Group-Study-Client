@@ -15,6 +15,7 @@ const Details = () => {
 
     const { user } = useContext(AuthContext)
     const email = user?.email
+    const name = user?.displayName
     const Status = "pending"
 
     // modal
@@ -46,7 +47,7 @@ const Details = () => {
         const QuickNote = form.QuickNote.value
         const pdfLink = form.pdfLink.value
 
-        const products = {Title, AssignmentDifficulty, Marks, Status, Description, Date, email, pdfLink, ImageURL, QuickNote }
+        const products = {Title, AssignmentDifficulty,name, Marks, Status, Description, Date, email, pdfLink, ImageURL, QuickNote }
         console.log(products);
 
 

@@ -8,9 +8,12 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from '../Login/Firebase/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddAssignment = () => {
+
+    const Navigate =useNavigate()
 
     const [startDate, setStartDate] = useState(new Date());
     const {user} =useContext(AuthContext)
@@ -49,6 +52,7 @@ const AddAssignment = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    Navigate('/assinments')
                     e.target.reset()
 
                 }

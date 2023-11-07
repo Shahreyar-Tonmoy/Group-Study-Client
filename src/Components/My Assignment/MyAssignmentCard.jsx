@@ -28,6 +28,7 @@ const MyAssignmentCard = ({ AllCards }) => {
 
       </th>
       <th>{Date}</th>
+      <th>{AssignmentDifficulty}</th>
       <th>
         {Marks}
       </th>

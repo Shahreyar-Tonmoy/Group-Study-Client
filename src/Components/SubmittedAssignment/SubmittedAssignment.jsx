@@ -46,6 +46,7 @@ const SubmittedAssignment = () => {
                             <th></th>
                             <th>Image</th>
                             <th>Name</th>
+                            <th>Title</th>
                             <th>Date : MM/DD/YYYY</th>
                             <th>Difficulty</th>
                             <th>Main Marks</th>

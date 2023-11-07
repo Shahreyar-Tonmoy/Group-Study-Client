@@ -38,6 +38,9 @@ const MyAssignment = () => {
     return (
         <div>
 
+           {
+            myAssignment.length > 0 ? <>
+            
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -45,13 +48,14 @@ const MyAssignment = () => {
                         <tr>
                         <th></th>
                             <th>Image</th>
-                            <th>Name</th>
+                            <th>Title</th>
                             <th>Date</th>
+                            <th>Difficulty</th>
                             <th>Main Marks</th>
                             <th>Got Mark</th>
                             <th>Status</th>
                             <th>Feedback</th>
-                            <th></th>
+                            
                             
                             
                         </tr>
@@ -76,6 +80,13 @@ const MyAssignment = () => {
 
                 </table>
             </div>
+
+            </>
+            : <h1 className="text-center text-3xl font-semibold mt-10">You Have No Assignment..</h1>
+
+
+            
+           }
 
 
 
