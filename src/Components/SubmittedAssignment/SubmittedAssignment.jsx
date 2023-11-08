@@ -23,6 +23,8 @@ const SubmittedAssignment = () => {
         .then(data => setSubmitAssignment(data))
 
     },[])
+    
+
     console.log(submitAssignment);
 
 

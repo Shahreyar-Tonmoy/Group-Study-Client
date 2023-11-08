@@ -16,10 +16,7 @@ const Card = () => {
                 <h2 className="mb-4 text-3xl font-bold text-dark dark:text-Dark sm:text-4xl md:text-[40px]">
                   Our Feature News
                 </h2>
-                <p className="text-base text-body-color dark:text-dark-6">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
-                </p>
+                
               </div>
             </div>
           </div>
@@ -27,20 +24,20 @@ const Card = () => {
           <div className="-mx-4 flex flex-wrap">
             <BlogCard
               date="Dec 22, 2023"
-              CardTitle="Meet AutoManage, the best AI management tools"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+              CardTitle="Enhanced Learning"
+              CardDescription="Group study allows for active engagement with the material. Participants can explain concepts to one another, ask questions, and clarify doubts, leading to a deeper understanding of the material"
               image="https://i.ibb.co/Cnwd4q6/image-01.jpg"
             />
             <BlogCard
               date="Dec 22, 2023"
-              CardTitle="Meet AutoManage, the best AI management tools"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+              CardTitle="Problem Solving"
+              CardDescription=" Group study sessions are great for tackling complex problems or assignments that may be challenging to tackle alone. Multiple heads working together can lead to creative solutions."
               image="https://i.ibb.co/Y23YC07/image-02.jpg"
             />
             <BlogCard
               date="Dec 22, 2023"
-              CardTitle="Meet AutoManage, the best AI management tools"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+              CardTitle="Types of Assignments"
+              CardDescription="Assignments can take various forms, including essays, research papers, presentations, reports, case studies, problem sets, group projects, and more. The type of assignment often depends on the subject and the learning objectives."
               image="https://i.ibb.co/7jdcnwn/image-03.jpg"
             />
           </div>
