@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const axiosSecure = axios.create({
-    baseURL: " http://localhost:5000",
+    baseURL: "https://assignment-11-server-side-one.vercel.app",
     withCredentials: true
 })
 
@@ -28,7 +28,7 @@ const UseAxios = () => {
 
                             Navigate("/signin")
 
-                        .catch(error => console.log(error.massage))
+                        .catch(error => console.log(error?.massage))
 
 
 

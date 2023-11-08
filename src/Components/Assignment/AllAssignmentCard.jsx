@@ -52,7 +52,7 @@ const AllAssignmentCard = ({ AllCards,myCartData,setMyCartData }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/addassignment/${_id}`,{
+                fetch(`https://assignment-11-server-side-one.vercel.app/addassignment/${_id}`,{
                     method :"DELETE"
                 }
                 

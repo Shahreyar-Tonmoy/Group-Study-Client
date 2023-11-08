@@ -15,7 +15,7 @@ const SubmittedAssignment = () => {
 
     const [submitAssignment,setSubmitAssignment] = useState([])
 
-    const url = `http://localhost:5000/submitstatus?Status=pending` 
+    const url = `https://assignment-11-server-side-one.vercel.app/submitstatus?Status=pending` 
 
     useEffect(()=>{
         fetch(url)

@@ -34,7 +34,7 @@ const GiveMark = () => {
 
 
 
-        fetch(`http://localhost:5000/submit/${_id}`, {
+        fetch(`https://assignment-11-server-side-one.vercel.app/submit/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type": 'application/json'

@@ -53,14 +53,14 @@ const AllAssignment = () => {
     // console.log(pages);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addassignmentCount`)
+        fetch(`https://assignment-11-server-side-one.vercel.app/addassignmentCount`)
             .then(res => res.json())
             .then(data => setCount(data.Count))
 
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addassignment?page=${currentPage}&size=${itemPerPages}`)
+        fetch(`https://assignment-11-server-side-one.vercel.app/addassignment?page=${currentPage}&size=${itemPerPages}`)
             .then(res => res.json())
             .then(data => setMyCartData(data))
 

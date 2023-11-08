@@ -52,7 +52,7 @@ const Details = () => {
 
 
 
-        fetch('http://localhost:5000/submit', {
+        fetch('https://assignment-11-server-side-one.vercel.app/submit', {
             method: 'POST',
             headers: {
                 "content-type": 'application/json'

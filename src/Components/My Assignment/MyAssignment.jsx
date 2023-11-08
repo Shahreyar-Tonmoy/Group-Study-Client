@@ -21,7 +21,7 @@ const MyAssignment = () => {
 
     const [myAssignment, setMyAssignment] = useState([])
 
-    // const url = `http://localhost:5000/submitemail?email=${email}`
+    // const url = `https://assignment-11-server-side-one.vercel.app/submitemail?email=${email}`
     const url = `/submitemail?email=${email}`
 
 
@@ -34,8 +34,8 @@ const MyAssignment = () => {
         //     setMyAssignment(res.data)
         // })
 
-        axiosSecure.get(url)
-        .then(res => setMyAssignment(res.data))
+        axiosSecure.get(url,{withCredentials: true})
+        .then(res => setMyAssignment(res?.data))
 
 
 

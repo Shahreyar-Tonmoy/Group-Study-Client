@@ -45,7 +45,7 @@ const Router = createBrowserRouter([
         {
             path : "/assinments",
             element : <AllAssignment></AllAssignment>,
-            loader : ()=> fetch("http://localhost:5000/addassignment")
+            loader : ()=> fetch("https://assignment-11-server-side-one.vercel.app/addassignment")
            
         },
         {
@@ -57,33 +57,33 @@ const Router = createBrowserRouter([
         {
             path : "/submittedAssignment",
             element : <PrivateRoute><SubmittedAssignment></SubmittedAssignment></PrivateRoute>,
-            // loader : ()=> fetch("http://localhost:5000/submit")
+            // loader : ()=> fetch("https://assignment-11-server-side-one.vercel.app/submit")
            
         },
         {
             path : "/details/:id",
             element :<PrivateRoute><Details></Details></PrivateRoute>,
-            loader : ({params}) =>fetch(`http://localhost:5000/addassignment/${params.id}`)
+            loader : ({params}) =>fetch(`https://assignment-11-server-side-one.vercel.app/addassignment/${params.id}`)
            
         },
         {
             path : "/update/:id",
             element :<PrivateRoute><Update></Update></PrivateRoute>,
-            loader : ({params}) =>fetch(`http://localhost:5000/addassignment/${params.id}`)
+            loader : ({params}) =>fetch(`https://assignment-11-server-side-one.vercel.app/addassignment/${params.id}`)
 
            
         },
         {
             path : "/givemark/:id",
             element :<PrivateRoute><GiveMark></GiveMark></PrivateRoute>,
-            loader : ({params}) =>fetch(`http://localhost:5000/submit/${params.id}`)
+            loader : ({params}) =>fetch(`https://assignment-11-server-side-one.vercel.app/submit/${params.id}`)
 
            
         },
         {
             path : "MyAssignment",
             element :<PrivateRoute><MyAssignment></MyAssignment></PrivateRoute>,
-            // loader : ()=> fetch("http://localhost:5000/submit")
+            // loader : ()=> fetch("https://assignment-11-server-side-one.vercel.app/submit")
             
 
            
