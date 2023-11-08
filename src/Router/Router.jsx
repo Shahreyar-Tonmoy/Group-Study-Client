@@ -57,7 +57,7 @@ const Router = createBrowserRouter([
         {
             path : "/submittedAssignment",
             element : <PrivateRoute><SubmittedAssignment></SubmittedAssignment></PrivateRoute>,
-            // loader : ()=> fetch("https://assignment-11-server-side-one.vercel.app/submit")
+            
            
         },
         {

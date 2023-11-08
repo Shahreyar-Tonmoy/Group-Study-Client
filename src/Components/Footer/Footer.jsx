@@ -1,5 +1,8 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
+
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -16,12 +19,9 @@ const Footer = () => {
                     alt="logo"
                     className="max-w-full w-32 "
                   />
-                  
+
                 </a>
-                <p className="mb-7 text-base text-body-color dark:text-dark-6">
-                  Sed ut perspiciatis undmnis is iste natus error sit amet
-                  voluptatem totam rem aperiam.
-                </p>
+                
                 <p className="flex items-center text-sm font-medium text-dark ">
                   <span className="mr-3 text-primary">
                     <svg
@@ -52,29 +52,31 @@ const Footer = () => {
                       </defs>
                     </svg>
                   </span>
-                  <span>+012 (345) 678 99</span>
+                  <span>+880 (164) 3622168</span>
                 </p>
               </div>
             </div>
 
-            <LinkGroup header="Resources">
-              <NavLink link="/#" label="SaaS Development" />
-              <NavLink link="/#" label="Our Products" />
-              <NavLink link="/#" label="User Flow" />
-              <NavLink link="/#" label="User Strategy" />
+            <LinkGroup header="Pages">
+              <NavLink link="/" label="Home" />
+              <NavLink link="/assinments" label="Assignments" />
+              <NavLink link="/MyAssignment" label="My Assignments" />
+              <NavLink link="/addassinments" label="Create Assignments" />
+              <NavLink link="/submittedAssignment" label="Submitted Assignments" />
             </LinkGroup>
-            <LinkGroup header="Company">
-              <NavLink link="/#" label="About TailGrids" />
-              <NavLink link="/#" label="Contact & Support" />
-              <NavLink link="/#" label="Success History" />
-              <NavLink link="/#" label="Setting & Privacy" />
+            <LinkGroup header="Assignment">
+            <NavLink link="/assinments" label="Assignments" />
+            <NavLink link="/addassinments" label="Create Assignments" />
+              <NavLink link="/submittedAssignment" label="Submitted Assignments" />
             </LinkGroup>
-            <LinkGroup header="Quick Links">
-              <NavLink link="/#" label="Premium Support" />
-              <NavLink link="/#" label="Our Services" />
-              <NavLink link="/#" label="Know Our Team" />
-              <NavLink link="/#" label="Download App" />
+            <LinkGroup header="Login & SignUp">
+            <NavLink link="/signin" label="Sign In" />
+            <NavLink link="/register" label="Register" />
+            
             </LinkGroup>
+            
+            
+            
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
               <div className="mb-10 w-full">
