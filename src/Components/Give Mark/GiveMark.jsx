@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
+
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 

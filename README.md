@@ -1,6 +1,6 @@
 
 
-<a href="https://bucolic-blini-9bf008.netlify.app/">Live Link</a>
+<a className="text-2xl text-red-500" href="https://bucolic-blini-9bf008.netlify.app/">Live Link</a>
 
 
  <p><span>Live link</span>https://bucolic-blini-9bf008.netlify.app/</p>
