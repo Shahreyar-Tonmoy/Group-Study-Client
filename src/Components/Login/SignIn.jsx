@@ -39,7 +39,7 @@ const SignIn = () => {
                 const loggedInUser = (result.user);
                 const user = { email }
 
-                axios.post(` http://localhost:5000/jwt`, user, { withCredentials: true })
+                axios.post(`http://localhost:5000/jwt`, user, { withCredentials: true })
                     .then(res => {
                         console.log(res.data);
                         if (res.data.success) {
@@ -76,7 +76,7 @@ const SignIn = () => {
             .then(result => {
                const user=(result.user)
 
-                axios.post(` http://localhost:5000/jwt`, user, {withCredentials: true})
+                axios.post(`http://localhost:5000/jwt`, user, {withCredentials: true})
                     .then(res => {
                         console.log(res.data);
                         if (res.data.success) {

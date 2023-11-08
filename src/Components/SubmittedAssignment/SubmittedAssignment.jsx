@@ -15,7 +15,7 @@ const SubmittedAssignment = () => {
 
     const [submitAssignment,setSubmitAssignment] = useState([])
 
-    const url = ` http://localhost:5000/submitstatus?Status=pending` 
+    const url = `http://localhost:5000/submitstatus?Status=pending` 
 
     useEffect(()=>{
         fetch(url)

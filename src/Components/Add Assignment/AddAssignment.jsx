@@ -35,7 +35,7 @@ const AddAssignment = () => {
         console.log(products);
 
 
-        fetch(' http://localhost:5000/addassignment', {
+        fetch('http://localhost:5000/addassignment', {
             method: 'POST',
             headers: {
                 "content-type": 'application/json'

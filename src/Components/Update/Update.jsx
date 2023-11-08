@@ -38,7 +38,7 @@ const Update = () => {
         console.log(products);
 
 
-        fetch(` http://localhost:5000/addassignment/${_id}`, {
+        fetch(`http://localhost:5000/addassignment/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type": 'application/json'

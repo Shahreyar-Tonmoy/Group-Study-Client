@@ -53,14 +53,14 @@ const AllAssignment = () => {
     // console.log(pages);
 
     useEffect(() => {
-        fetch(` http://localhost:5000/addassignmentCount`)
+        fetch(`http://localhost:5000/addassignmentCount`)
             .then(res => res.json())
             .then(data => setCount(data.Count))
 
     }, [])
 
     useEffect(() => {
-        fetch(` http://localhost:5000/addassignment?page=${currentPage}&size=${itemPerPages}`)
+        fetch(`http://localhost:5000/addassignment?page=${currentPage}&size=${itemPerPages}`)
             .then(res => res.json())
             .then(data => setMyCartData(data))
 

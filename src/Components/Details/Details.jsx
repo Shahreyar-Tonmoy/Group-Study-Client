@@ -52,7 +52,7 @@ const Details = () => {
 
 
 
-        fetch(' http://localhost:5000/submit', {
+        fetch('http://localhost:5000/submit', {
             method: 'POST',
             headers: {
                 "content-type": 'application/json'

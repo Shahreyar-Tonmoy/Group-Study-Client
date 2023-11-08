@@ -52,7 +52,7 @@ const AllAssignmentCard = ({ AllCards,myCartData,setMyCartData }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(` http://localhost:5000/addassignment/${_id}`,{
+                fetch(`http://localhost:5000/addassignment/${_id}`,{
                     method :"DELETE"
                 }
                 

@@ -1,18 +1,15 @@
-import React, { useRef, useState } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import  {  useState } from "react";
 
-import { useAnimationFrame } from "framer-motion"
+
 import { Link } from "react-router-dom";
 
 const Nav = () => {
 
-  const ref = useRef(null)
-  
-  useAnimationFrame((t) => {
-    const rotate = Math.sin(t / 10000) * 200;
-    const y = (1 + Math.sin(t / 1000)) * -50;
-    ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
-  });
 
+  
+  
 
   return (
     <>
@@ -121,11 +118,11 @@ const Nav = () => {
 
 export default Nav;
 
-const SingleImage = ({ href,ref, imgSrc }) => {
+const SingleImage = ({ href, imgSrc }) => {
   return (
     <>
       <a href={href} className="flex w-full items-center justify-center">
-        <img ref={ref} src={imgSrc} alt="brand image" className="h-10 w-full" />
+        <img src={imgSrc} alt="brand image" className="h-10 w-full" />
       </a>
     </>
   );
