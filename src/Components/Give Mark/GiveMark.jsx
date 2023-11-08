@@ -103,6 +103,22 @@ const GiveMark = () => {
                             <dialog id="my_modal_2" className="modal">
                                 <div className="modal-box w-screen h-screen">
                                     <iframe src={pdfLink} className='w-full h-full rounded-lg' frameborder="0"></iframe>
+
+                                    <h1 className="text-3xl mt-5 text-center font-semibold">Click here pdf Link</h1>
+                                    
+                                    
+
+
+                                    <a className='flex justify-center' href={pdfLink} target="_blank"><button  className="flex mt-5 select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button" data-ripple-dark="true">
+                                         PDF
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true" className="h-5 w-5">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                        </svg>
+                                    </button></a>
+
+
+
+
                                 </div>
                                 <form method="dialog" className="modal-backdrop">
                                     <button>close</button>
