@@ -1,6 +1,18 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+
+import { useAnimationFrame } from "framer-motion"
 
 const Nav = () => {
+
+  const ref = useRef(null)
+  
+  useAnimationFrame((t) => {
+    const rotate = Math.sin(t / 10000) * 200;
+    const y = (1 + Math.sin(t / 1000)) * -50;
+    ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
+  });
+
+
   return (
     <>
       <Navbar />
@@ -145,11 +157,11 @@ const Nav = () => {
 
 export default Nav;
 
-const SingleImage = ({ href, imgSrc }) => {
+const SingleImage = ({ href,ref, imgSrc }) => {
   return (
     <>
       <a href={href} className="flex w-full items-center justify-center">
-        <img src={imgSrc} alt="brand image" className="h-10 w-full" />
+        <img ref={ref} src={imgSrc} alt="brand image" className="h-10 w-full" />
       </a>
     </>
   );

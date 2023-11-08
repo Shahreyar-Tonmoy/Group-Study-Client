@@ -5,9 +5,10 @@
 import { useContext, useState } from "react";
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-;
-import swal from 'sweetalert';
+
+
 import { AuthContext } from "./Firebase/AuthProvider";
+import swal from "sweetalert";
 
 
 

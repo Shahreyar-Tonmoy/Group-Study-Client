@@ -157,7 +157,7 @@ const Details = () => {
                                                 <span className="text-lg">Quick Note</span>
                                             </label>
 
-                                            <textarea name='QuickNote' className="textarea textarea-bordered lg:w-[500px]" placeholder="Enter Quick Note"></textarea>
+                                            <textarea name='QuickNote' className="textarea textarea-bordered lg:w-[500px]" required placeholder="Enter Quick Note"></textarea>
 
                                             <div className="form-control lg:w-[500px] mt-6">
                                                 <button className="btn text-white border-none hover:bg-[#81246A] bg-[#81246A]">Submit Assignment</button>

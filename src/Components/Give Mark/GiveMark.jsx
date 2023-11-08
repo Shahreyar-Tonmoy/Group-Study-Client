@@ -4,6 +4,11 @@ import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
+
+
+
+
+
 const GiveMark = () => {
 
     const Navigate = useNavigate()
@@ -130,7 +135,7 @@ const GiveMark = () => {
                                                     <span className="text-lg">Feedback</span>
                                                 </label>
 
-                                                <textarea name='Feedback' className="textarea textarea-bordered lg:w-[300px]" placeholder="Enter Feedback"></textarea>
+                                                <textarea name='Feedback' className="textarea textarea-bordered lg:w-[300px]" placeholder="Enter Feedback" required></textarea>
 
                                                 <div className="form-control lg:w-[300px] mt-6">
                                                     <button className="btn text-white border-none hover:bg-[#81246A] bg-[#81246A]">Submit</button>

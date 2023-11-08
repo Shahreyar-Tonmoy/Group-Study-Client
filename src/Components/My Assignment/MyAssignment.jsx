@@ -2,13 +2,17 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Login/Firebase/AuthProvider';
 import MyAssignmentCard from './MyAssignmentCard';
-import { useLoaderData } from 'react-router-dom';
+
+import axios from 'axios';
+import UseAxios from '../Hook/UseAxios';
 
 const MyAssignment = () => {
     // const data =useLoaderData()
 
     const { user } = useContext(AuthContext)
     const email = user?.email
+
+    const axiosSecure = UseAxios()
 
     // const filter =data.filter(e => e.email.includes(email) )
     // console.log(filter);
@@ -17,19 +21,35 @@ const MyAssignment = () => {
 
     const [myAssignment, setMyAssignment] = useState([])
 
-    const url = `http://localhost:5000/submitemail?email=${email}`
+    // const url = `http://localhost:5000/submitemail?email=${email}`
+    const url = `/submitemail?email=${email}`
+
+
     console.log(url);
 
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setMyAssignment(data)
+
+        // axios.get(url,{withCredentials: true})
+        // .then(res =>{
+        //     setMyAssignment(res.data)
+        // })
+
+        axiosSecure.get(url)
+        .then(res => setMyAssignment(res.data))
 
 
-            )
 
 
-    }, [])
+
+        // fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => setMyAssignment(data)
+
+
+        //     )
+
+
+    }, [url,axiosSecure])
     
 
 

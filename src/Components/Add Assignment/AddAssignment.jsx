@@ -111,7 +111,7 @@ const AddAssignment = () => {
                                     <span className="text-lg">Description</span>
                                 </label>
 
-                                <textarea name='Description' className="textarea textarea-bordered lg:w-[500px]" placeholder="Description"></textarea>
+                                <textarea required name='Description' className="textarea textarea-bordered lg:w-[500px]" placeholder="Description"></textarea>
 
 
 

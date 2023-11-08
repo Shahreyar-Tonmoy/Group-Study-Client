@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 
 
 const AllAssignmentCard = ({ AllCards,myCartData,setMyCartData }) => {
-    const { _id, Title, AssignmentDifficulty, Marks, Description, Date, ImageURL } = AllCards
+    const { _id, Title,email, AssignmentDifficulty, Marks, Description, Date, ImageURL } = AllCards
 
     const Dist = Description.slice("", 90)
 
