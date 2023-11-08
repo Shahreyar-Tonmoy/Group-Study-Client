@@ -25,7 +25,7 @@ const MyAssignment = () => {
     const url = `/submitemail?email=${email}`
 
 
-    console.log(url);
+    // console.log(url);
 
     useEffect(() => {
 

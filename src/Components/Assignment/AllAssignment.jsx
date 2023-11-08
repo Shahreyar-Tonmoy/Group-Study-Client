@@ -26,7 +26,7 @@ const AllAssignment = () => {
     const [count, setCount] = useState()
     const [itemPerPages, setItemPerPages] = useState(6)
     const [currentPage, setCurrentPage] = useState(0)
-    console.log(count);
+    // console.log(count);
 
 
     const hendleChange = (e) => {
@@ -39,7 +39,7 @@ const AllAssignment = () => {
 
     // eslint-disable-next-line no-undef
     const numberOfPages = Math.ceil(count / itemPerPages)
-    console.log(numberOfPages);
+    // console.log(numberOfPages);
 
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import SubmittedAssignmentCard from "./SubmittedAssignmentCard";
 import { useEffect, useState } from "react";
@@ -25,7 +26,7 @@ const SubmittedAssignment = () => {
     },[])
     
 
-    console.log(submitAssignment);
+    // console.log(submitAssignment);
 
 
 
