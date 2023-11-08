@@ -28,30 +28,30 @@ const FAQ = () => {
         <div className=" flex max-w-screen-xl mx-auto flex-wrap">
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="What is an online group study?"
+              text=" Online group study is a collaborative learning approach where individuals come together virtually to study and review academic materials. It typically involves video conferencing, document sharing, and discussions to enhance learning."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="How can I find or join an online study group?"
+              text="You can find online study groups on platforms like Zoom, Microsoft Teams, or Google Meet. You can also look for study groups on social media, university forums, or educational websites."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header=" What are the benefits of online group study?"
+              text="Online group study offers benefits like shared knowledge, motivation, diverse perspectives, and the opportunity to clarify doubts and learn from peers."
             />
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="How can I effectively organize an online study group?"
+              text="To organize an effective online study group, establish clear goals, a schedule, and rules. Use collaborative tools for document sharing and communication. Assign roles like a leader or note-taker to keep the group focused."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header=" What are some effective online study tools for collaboration?"
+              text="Tools like Google Docs, Microsoft OneDrive, or shared note-taking apps such as Evernote are excellent for collaborating on study materials. Video conferencing platforms like Zoom or Google Meet are also valuable for discussions."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="How can I make the most out of online group study sessions?"
+              text=" To maximize the benefits, come prepared, actively engage in discussions, ask questions, share your knowledge, and review the material both before and after the study group."
             />
           </div>
         </div>

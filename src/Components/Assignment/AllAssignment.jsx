@@ -13,6 +13,12 @@ import { HiArrowSmRight,HiArrowSmLeft} from 'react-icons/hi';
 
 const AllAssignment = () => {
     const Assignment = useLoaderData()
+    const [myCartData, setMyCartData] = useState(Assignment)
+
+
+
+
+
     const [count, setCount] = useState()
     const [itemPerPages, setItemPerPages] = useState(6)
     const [currentPage, setCurrentPage] = useState(0)
@@ -43,16 +49,16 @@ const AllAssignment = () => {
     // console.log(pages);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addassignmentCount`)
+        fetch(` http://localhost:5000/addassignmentCount`)
             .then(res => res.json())
             .then(data => setCount(data.Count))
 
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addassignment?page=${currentPage}&size=${itemPerPages}`)
+        fetch(` http://localhost:5000/addassignment?page=${currentPage}&size=${itemPerPages}`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setMyCartData(data))
 
     }, [currentPage,itemPerPages])
 
@@ -89,8 +95,7 @@ const AllAssignment = () => {
 
 
 
-    const [myCartData, setMyCartData] = useState(Assignment)
-
+ 
 
     // console.log(myCartData.length);
 

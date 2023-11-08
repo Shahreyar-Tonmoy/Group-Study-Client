@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 import SubmittedAssignmentCard from "./SubmittedAssignmentCard";
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ const SubmittedAssignment = () => {
 
     const [submitAssignment,setSubmitAssignment] = useState([])
 
-    const url = `http://localhost:5000/submitstatus?Status=pending` 
+    const url = ` http://localhost:5000/submitstatus?Status=pending` 
 
     useEffect(()=>{
         fetch(url)
@@ -51,6 +51,8 @@ const SubmittedAssignment = () => {
                             <th>Difficulty</th>
                             <th>Main Marks</th>
                             <th>Status</th>
+                            <th>Give Mark</th>
+                            <th>Update</th>
                             <th></th>
                         </tr>
                     </thead>

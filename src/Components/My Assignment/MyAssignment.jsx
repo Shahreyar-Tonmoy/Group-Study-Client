@@ -21,7 +21,7 @@ const MyAssignment = () => {
 
     const [myAssignment, setMyAssignment] = useState([])
 
-    // const url = `http://localhost:5000/submitemail?email=${email}`
+    // const url = ` http://localhost:5000/submitemail?email=${email}`
     const url = `/submitemail?email=${email}`
 
 
