@@ -2,11 +2,7 @@
 
 <a className="text-2xl text-red-500" href="https://bucolic-blini-9bf008.netlify.app/">Live Link</a>
 
-
- <p><span>Live link</span>https://bucolic-blini-9bf008.netlify.app/</p>
-
-
-
+<a className="text-2xl text-red-500" href="https://github.com/Shahreyar-Tonmoy/Group-Study-Server">Server side github link</a>
 
 
 
