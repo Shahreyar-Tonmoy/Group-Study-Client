@@ -5,6 +5,11 @@
 <a className="text-2xl text-red-500" href="https://github.com/Shahreyar-Tonmoy/Group-Study-Server">Server side github link</a>
 
 
+Technology Used: Rect.js, Node.js, Express.js, Mongodb, Tailwind Css, Firebase
+
+
+
+Features:
 
 1. User Registration and Profiles:
 
