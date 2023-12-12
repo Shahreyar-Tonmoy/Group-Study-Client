@@ -1,6 +1,6 @@
 <h1 align="left">Clint side live link</h1>
 
-<a className="text-2xl text-red-500" href="https://assignment-11-client-side.vercel.app/">Live Link</a>
+<a className="text-2xl text-red-500" href="https://illustrious-mochi-0ce0a8.netlify.app/">Live Link</a>
 
 <h1 align="left">Server side github link</h1>
 
