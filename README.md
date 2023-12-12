@@ -1,12 +1,21 @@
-
+<h1 align="left">Clint side live link</h1>
 
 <a className="text-2xl text-red-500" href="https://bucolic-blini-9bf008.netlify.app/">Live Link</a>
 
+<h1 align="left">Server side github link</h1>
 
- <p><span>Live link</span>https://bucolic-blini-9bf008.netlify.app/</p>
+<a className="text-2xl text-red-500" href="https://github.com/Shahreyar-Tonmoy/Group-Study-Server">Server side github link</a>
 
+<h1 align="left">Technology Used:</h1>
 
+ Rect.js, Node.js, Express.js, Mongodb, Tailwind Css, Firebase
 
+ <h1 align="left">Description:</h1>
+It is a online Group Study Application. User can create assignment after authentication.User can see new created assigment in all assignment route.Anyone can marks others assigment asnwer.
+
+ 
+
+<h1 align="left">Features:</h1>
 
 
 
