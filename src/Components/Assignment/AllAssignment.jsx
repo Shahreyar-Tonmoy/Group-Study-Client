@@ -96,17 +96,17 @@ const AllAssignment = () => {
         }
     }
 
-        const filter3 =myCartData.filter(e => e.AssignmentDifficulty.toLowerCase().includes("Hard".toLowerCase()) )
-         const filter1 =myCartData.filter(e => e.AssignmentDifficulty.toLowerCase().includes("Easy".toLowerCase()) )
-          const filter2 =myCartData.filter(e => e.AssignmentDifficulty.toLowerCase().includes("Medium".toLowerCase()) )
-
-
-    
+    const filter3 = myCartData.filter(e => e.AssignmentDifficulty.toLowerCase().includes("Hard".toLowerCase()))
+    const filter1 = myCartData.filter(e => e.AssignmentDifficulty.toLowerCase().includes("Easy".toLowerCase()))
+    const filter2 = myCartData.filter(e => e.AssignmentDifficulty.toLowerCase().includes("Medium".toLowerCase()))
 
 
 
 
-  
+
+
+
+
 
 
 
@@ -155,7 +155,7 @@ const AllAssignment = () => {
                     </TabPanel>
                     <TabPanel>
 
-                    {
+                        {
                             loading ? <><div className="flex justify-center items-center"><span className="loading mx-auto loading-dots loading-lg"></span></div></> : <>
                                 <div className=" max-w-screen-xl  lg:px-12 mx-auto lg:gap-5  grid md:grid-cols-2 lg:grid-cols-3">
                                     {
@@ -165,11 +165,11 @@ const AllAssignment = () => {
                             </>
                         }
 
-                   
-                        
+
+
                     </TabPanel>
                     <TabPanel>
-                    {
+                        {
                             loading ? <><div className="flex justify-center items-center"><span className="loading mx-auto loading-dots loading-lg"></span></div></> : <>
                                 <div className=" max-w-screen-xl  lg:px-12 mx-auto lg:gap-5  grid md:grid-cols-2 lg:grid-cols-3">
                                     {
@@ -179,11 +179,11 @@ const AllAssignment = () => {
                             </>
                         }
 
-                        
-                        
+
+
                     </TabPanel>
                     <TabPanel>
-                    {
+                        {
                             loading ? <><div className="flex justify-center items-center"><span className="loading mx-auto loading-dots loading-lg"></span></div></> : <>
                                 <div className=" max-w-screen-xl  lg:px-12 mx-auto lg:gap-5  grid md:grid-cols-2 lg:grid-cols-3">
                                     {
@@ -193,10 +193,10 @@ const AllAssignment = () => {
                             </>
                         }
 
-                        
-                        
+
+
                     </TabPanel>
-                    
+
                 </Tabs>
             </div>
 
